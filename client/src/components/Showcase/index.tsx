@@ -15,7 +15,7 @@ const Showcase = ({ title, highlight, games }: ShowcaseProps) => (
   <S.Wrapper>
     {!!title && (
       <Heading lineLeft lineColor="secondary">
-        Free Games
+        {title}
       </Heading>
     )}
 
