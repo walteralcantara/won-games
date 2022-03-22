@@ -2,14 +2,12 @@
   "kind": "collectionType",
   "collectionName": "platforms",
   "info": {
-    "name": "Platform"
+    "name": "platform"
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "draftAndPublish": true
+    "timestamps": true
   },
-  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",

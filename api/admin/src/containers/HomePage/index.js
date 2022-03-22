@@ -1,3 +1,9 @@
+/*
+ *
+ * HomePage
+ *
+ */
+/* eslint-disable */
 import React, { memo } from "react";
 import { FormattedMessage } from "react-intl";
 import PageTitle from "../../components/PageTitle";
@@ -29,12 +35,16 @@ const FIRST_BLOCK_LINKS = [
 const SOCIAL_LINKS = [
   {
     name: "GitHub",
-    link: "https://github.com/waltermalcantara/",
+    link: "https://github.com/React-avancado/",
   },
   {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/walteralcantara/",
-  }
+    name: "Slack",
+    link: "https://bit.ly/will-slack",
+  },
+  {
+    name: "Twitter",
+    link: "https://twitter.com/Willian_Justen",
+  },
 ];
 
 const HomePage = () => {
@@ -47,7 +57,7 @@ const HomePage = () => {
         <div className="row">
           <div className="col-lg-8 col-md-12">
             <Block>
-              <h2 id="mainHeader">Welcome to Won Games!</h2>
+              <h2 id="mainHeader">Bem vindo a Won Games!</h2>
               <P>
                 Ao lado você pode inserir diferentes jogos, categorias e
                 publishers para a nossa maravilhosa loja de jogos!{" "}

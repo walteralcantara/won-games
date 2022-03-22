@@ -11,7 +11,7 @@ const colors = {
   pink: '#ff5b77',
   purple: '#613d7c',
   gray: '#464a4c',
-  border: '#e3e9f3',
+  border: '#E3E9F3',
   'gray-dark': '#292b2c',
   grayLight: '#636c72',
   'gray-lighter': '#eceeef',
@@ -20,15 +20,13 @@ const colors = {
   darkGrey: '#e3e9f3',
   lightGrey: '#fafafa',
   lightestGrey: '#fbfbfb',
-  mediumGrey: '#f2f3f4',
+  mediumGrey: '#F2F3F4',
   grey: '#9ea7b8',
   greyDark: '#292b2c',
   greyAlpha: 'rgba(227, 233, 243, 0.5)',
-  lightestBlue: '#e4f0fc',
-  lightBlue: '#e6f0fb',
+  lightBlue: '#E6F0FB',
   mediumBlue: '#007eff',
-  darkBlue: '#aed4fb',
-  pale: '#f7f8f8',
+  darkBlue: '#AED4FB',
   content: {
     background: '#fafafb',
     'background-alpha': 'rgba(14, 22, 34, 0.02)',
@@ -37,7 +35,6 @@ const colors = {
     'link-hover': '#1c2431',
     'link-color': '#919bae',
     'title-color': '#5b626f',
-    'background-header-link': '#007eff',
   },
   strapi: {
     'gray-light': '#eff3f6',
@@ -51,7 +48,7 @@ const colors = {
     blue: '#0a0d27',
     blueDark: '#06081b',
     pink: '#f231a5',
-    orange: '#f56161'
+    orange: '#f56161',
   }
 };
 

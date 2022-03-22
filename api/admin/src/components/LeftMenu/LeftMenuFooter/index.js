@@ -1,14 +1,26 @@
-import React from 'react';
-import Wrapper, { A } from './Wrapper';
+/**
+ *
+ * LeftMenuFooter
+ *
+ */
+
+import React from "react";
+
+import Wrapper from "./Wrapper";
 
 function LeftMenuFooter() {
-
   return (
     <Wrapper>
       <div className="poweredBy">
-        <A key="website" href="https://github.com/walteralcantara" target="_blank" rel="noopener noreferrer">
-          Walter Alcantara
-        </A>
+        <span>Mantido por </span>
+        <a
+          key="website"
+          href="https://reactavancado.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          React Avançado
+        </a>
       </div>
     </Wrapper>
   );
