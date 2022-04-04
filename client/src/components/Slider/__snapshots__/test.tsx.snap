@@ -178,13 +178,3 @@ exports[`<Slider /> should render children as slider item 1`] = `
   </div>
 </section>
 `;
-
-exports[`<Slider /> should render the heading 1`] = `
-<main
-  class=""
->
-  <h1>
-    Slider
-  </h1>
-</main>
-`;
