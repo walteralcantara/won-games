@@ -3,10 +3,8 @@ import { initializeApollo } from 'utils/apollo'
 
 import Game, { GameTemplateProps } from 'templates/Game'
 
-import galleryMock from 'components/Gallery/mock'
 import gamesMock from 'components/GameCardSlider/mock'
 import highlightMock from 'components/Highlight/mock'
-
 import { QueryGames, QueryGamesVariables } from 'graphql/generated/QueryGames'
 import { QUERY_GAMES, QUERY_GAME_BY_SLUG } from 'graphql/queries/games'
 import {
@@ -20,7 +18,9 @@ const apolloClient = initializeApollo()
 export default function Index(props: GameTemplateProps) {
   const router = useRouter()
 
-  // if route doesnt exists yet, show something
+  // se a rota não tiver sido gerada ainda
+  // você pode mostrar um loading
+  // uma tela de esqueleto
   if (router.isFallback) return null
 
   return <Game {...props} />
@@ -58,14 +58,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       revalidate: 60,
-      cover: `http://localhost:8085${game.cover?.src}`,
+      cover: `http://localhost:1337${game.cover?.src}`,
       gameInfo: {
         title: game.name,
         price: game.price,
         description: game.short_description
       },
       gallery: game.gallery.map((image) => ({
-        src: `http://localhost:8085${image.src}`,
+        src: `http://localhost:1337${image.src}`,
         label: image.label
       })),
       description: game.description,
