@@ -1,25 +1,30 @@
 import Home, { HomeTemplateProps } from 'templates/Home'
-import bannersMock from 'components/BannerSlider/mock'
 import gamesMock from 'components/GameCardSlider/mock'
 import highlightMock from 'components/Highlight/mock'
 import { initializeApollo } from 'utils/apollo'
-import { QUERY_HOME } from 'graphql/queries/home'
 import { QueryHome } from 'graphql/generated/QueryHome'
+import { QUERY_HOME } from 'graphql/queries/home'
 
 export default function Index(props: HomeTemplateProps) {
   return <Home {...props} />
 }
 
+// ATENÇÃO:
+// os métodos getStaticProps/getServerSideProps SÓ FUNCIONAM EM PAGES
+
+// getStaticProps => gerar estático em build time (gatsby)
+// getServerSideProps => gerar via ssr a cada request (nunca vai para o bundle do client)
+// getInitialProps => gerar via ssr a cada request (vai para o client, faz hydrate do lado do client depois do 1 req)
 export async function getStaticProps() {
   const apolloClient = initializeApollo()
 
   const {
-    data: { banners, newGames }
+    data: { banners, newGames, upcomingGames, freeGames }
   } = await apolloClient.query<QueryHome>({ query: QUERY_HOME })
 
   return {
     props: {
-      revalidate: 60,
+      revalidate: 10,
       banners: banners.map((banner) => ({
         img: `http://localhost:8085${banner.image?.url}`,
         title: banner.title,
@@ -41,10 +46,21 @@ export async function getStaticProps() {
       })),
       mostPopularHighlight: highlightMock,
       mostPopularGames: gamesMock,
-      upcommingGames: gamesMock,
-      upcommingHighlight: highlightMock,
-      upcommingMoreGames: gamesMock,
-      freeGames: gamesMock,
+      upcomingGames: upcomingGames.map((game) => ({
+        title: game.name,
+        slug: game.slug,
+        developer: game.developers[0].name,
+        img: `http://localhost:8085${game.cover?.url}`,
+        price: game.price
+      })),
+      upcomingHighlight: highlightMock,
+      freeGames: freeGames.map((game) => ({
+        title: game.name,
+        slug: game.slug,
+        developer: game.developers[0].name,
+        img: `http://localhost:8085${game.cover?.url}`,
+        price: game.price
+      })),
       freeHighlight: highlightMock
     }
   }
