@@ -18,26 +18,16 @@ const apolloClient = initializeApollo()
 export default function Index(props: GameTemplateProps) {
   const router = useRouter()
 
-  // se a rota não tiver sido gerada ainda
-  // você pode mostrar um loading
-  // uma tela de esqueleto
   if (router.isFallback) return null
 
   return <Game {...props} />
 }
 
-// gerar em build time (/game/bla, /bame/foo ...)
 export async function getStaticPaths() {
-  const { data } = await apolloClient.query<QueryGames, QueryGamesVariables>({
-    query: QUERY_GAMES,
-    variables: { limit: 9 }
-  })
-
-  const paths = data.games.map(({ slug }) => ({
-    params: { slug }
-  }))
-
-  return { paths, fallback: true }
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -58,14 +48,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       revalidate: 60,
-      cover: `http://localhost:1337${game.cover?.src}`,
+      cover: `http://localhost:8085${game.cover?.src}`,
       gameInfo: {
         title: game.name,
         price: game.price,
         description: game.short_description
       },
       gallery: game.gallery.map((image) => ({
-        src: `http://localhost:1337${image.src}`,
+        src: `http://localhost:8085${image.src}`,
         label: image.label
       })),
       description: game.description,
