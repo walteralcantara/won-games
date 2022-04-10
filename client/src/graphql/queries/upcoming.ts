@@ -11,6 +11,7 @@ export const QUERY_UPCOMING = gql`
     ) {
       ...GameFragment
     }
+
     showcase: home {
       upcomingGames {
         title
@@ -20,6 +21,7 @@ export const QUERY_UPCOMING = gql`
       }
     }
   }
+
   ${GameFragment}
   ${HighlightFragment}
 `
