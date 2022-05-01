@@ -82,4 +82,4 @@ exports[`<Radio /> should render with label (white) 1`] = `
     Radio
   </label>
 </div>
-`;
+`

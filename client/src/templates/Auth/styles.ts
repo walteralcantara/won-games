@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 import * as HeadingStyles from 'components/Heading/styles'
 import * as LogoStyles from 'components/Logo/styles'
-import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   display: grid;
@@ -46,9 +46,9 @@ export const BannerContent = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     justify-content: space-between;
+    height: 100%;
     position: relative;
     z-index: ${theme.layers.base};
-    height: 100%;
 
     a {
       width: fit-content;
@@ -62,6 +62,7 @@ export const Subtitle = styled.h3`
     font-size: ${theme.font.sizes.xxlarge};
     font-weight: ${theme.font.light};
     margin-top: ${theme.spacings.xxsmall};
+
     strong {
       color: ${theme.colors.primary};
     }

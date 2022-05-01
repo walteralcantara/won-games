@@ -177,4 +177,4 @@ exports[`<Slider /> should render children as slider item 1`] = `
     </button>
   </div>
 </section>
-`;
+`

@@ -20,6 +20,7 @@ export const ShowMore = styled.div`
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+
     > svg {
       color: ${theme.colors.primary};
     }

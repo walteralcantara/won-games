@@ -14,7 +14,7 @@ const props = {
 
 describe('<GameCard />', () => {
   it('should render correctly', () => {
-    renderWithTheme(<GameCard {...props} />)
+    const { container } = renderWithTheme(<GameCard {...props} />)
 
     expect(
       screen.getByRole('heading', { name: props.title })
@@ -35,6 +35,8 @@ describe('<GameCard />', () => {
     )
 
     expect(screen.getByLabelText(/add to wishlist/i)).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should render price in label', () => {
@@ -47,13 +49,13 @@ describe('<GameCard />', () => {
   })
 
   it('should render a line-through in price when promotional', () => {
-    renderWithTheme(<GameCard {...props} promotionalPrice={200} />)
+    renderWithTheme(<GameCard {...props} promotionalPrice={15} />)
 
     expect(screen.getByText('$235.00')).toHaveStyle({
       textDecoration: 'line-through'
     })
 
-    expect(screen.getByText('$200.00')).not.toHaveStyle({
+    expect(screen.getByText('$15.00')).not.toHaveStyle({
       textDecoration: 'line-through'
     })
   })

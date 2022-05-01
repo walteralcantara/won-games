@@ -1,4 +1,5 @@
 import { useQueryGames } from 'graphql/queries/games'
+
 import Base from 'templates/Base'
 import { KeyboardArrowDown as ArrowDown } from '@styled-icons/material-outlined/KeyboardArrowDown'
 
@@ -42,7 +43,7 @@ const GamesTemplate = ({ filterItems }: GamesTemplateProps) => {
                   title={game.name}
                   slug={game.slug}
                   developer={game.developers[0].name}
-                  img={`http://localhost:8085${game.cover!.url}`}
+                  img={`${game.cover!.url}`}
                   price={game.price}
                 />
               ))}

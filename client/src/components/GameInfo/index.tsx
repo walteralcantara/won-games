@@ -2,10 +2,10 @@ import {
   AddShoppingCart,
   FavoriteBorder
 } from '@styled-icons/material-outlined'
+
 import Button from 'components/Button'
 import Heading from 'components/Heading'
 import Ribbon from 'components/Ribbon'
-
 import formatPrice from 'utils/format-price'
 
 import * as S from './styles'

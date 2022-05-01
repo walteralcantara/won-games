@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import Footer from '.'
@@ -8,7 +8,7 @@ describe('<Footer />', () => {
     const { container } = renderWithTheme(<Footer />)
 
     expect(
-      screen.getByRole('heading', { name: /contact/i })
+      screen.getByRole('heading', { name: /contact us/i })
     ).toBeInTheDocument()
 
     expect(

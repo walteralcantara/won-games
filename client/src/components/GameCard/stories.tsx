@@ -16,7 +16,7 @@ export default {
     developer: 'Rockstar Games',
     img: 'https://source.unsplash.com/user/willianjusten/300x140',
     price: 235,
-    promotionalPrice: 200
+    promotionalPrice: 215
   },
   argTypes: {
     onFav: { action: 'clicked' },

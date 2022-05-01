@@ -10,7 +10,7 @@ const props = {
 }
 
 describe('<GameInfo />', () => {
-  it('should render game information', () => {
+  it('should render game informations', () => {
     const { container } = renderWithTheme(<GameInfo {...props} />)
 
     expect(
@@ -18,6 +18,7 @@ describe('<GameInfo />', () => {
     ).toBeInTheDocument()
     expect(screen.getByText(/\$210\.00/)).toBeInTheDocument()
     expect(screen.getByText(/game description/i)).toBeInTheDocument()
+
     expect(container.firstChild).toMatchSnapshot()
   })
 

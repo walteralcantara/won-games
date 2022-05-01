@@ -6,6 +6,7 @@ describe('<MediaMatch />', () => {
   let desktopHeading: Element
   let mobileHeading: Element
 
+  // hook tests
   beforeEach(() => {
     render(
       <>

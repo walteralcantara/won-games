@@ -18,5 +18,5 @@ export const Default: Story<UserDropdownProps> = (args) => (
 )
 
 Default.args = {
-  username: 'Walter'
+  username: 'Willian'
 }

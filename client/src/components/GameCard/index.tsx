@@ -1,9 +1,11 @@
 import Link from 'next/link'
+
 import {
   AddShoppingCart,
   Favorite,
   FavoriteBorder
 } from '@styled-icons/material-outlined'
+
 import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
 import Button from 'components/Button'
 import * as S from './styles'
@@ -56,9 +58,9 @@ const GameCard = ({
       </Link>
       <S.FavButton onClick={onFav} role="button">
         {favorite ? (
-          <Favorite aria-label="Remove from wishlist" />
+          <Favorite aria-label="Remove from Wishlist" />
         ) : (
-          <FavoriteBorder aria-label="Add to wishlist" />
+          <FavoriteBorder aria-label="Add to Wishlist" />
         )}
       </S.FavButton>
       <S.BuyBox>

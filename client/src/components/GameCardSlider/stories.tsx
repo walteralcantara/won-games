@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react'
+import { Story, Meta } from '@storybook/react/types-6-0'
+
 import { GameCardProps } from 'components/GameCard'
 import GameCardSlider from '.'
-
 import items from './mock'
 
 export default {
@@ -11,7 +11,7 @@ export default {
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'dark'
+      default: 'won-dark'
     }
   }
 } as Meta

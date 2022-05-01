@@ -1,6 +1,7 @@
+import Link from 'next/link'
+
 import Heading from 'components/Heading'
 import Logo from 'components/Logo'
-import Link from 'next/link'
 import * as S from './styles'
 
 type AuthProps = {
@@ -25,7 +26,7 @@ const Auth = ({ title, children }: AuthProps) => (
           </S.Subtitle>
         </div>
 
-        <S.Footer>Won Games 2022 &copy; All Rights Reserved</S.Footer>
+        <S.Footer>Won Games 2020 © Todos os Direitos Reservados</S.Footer>
       </S.BannerContent>
     </S.BannerBlock>
 

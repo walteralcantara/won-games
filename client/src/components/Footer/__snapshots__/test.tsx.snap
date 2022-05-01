@@ -33,7 +33,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
 
 .c2 {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: minmax(auto,50%) 1fr;
   gap: 3.2rem;
   margin-top: 3.2rem;
 }
@@ -46,6 +46,11 @@ exports[`<Footer /> should render 4 column topics 1`] = `
   text-decoration: none;
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
+}
+
+.c3 a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .c3 a:hover {
@@ -83,7 +88,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
     >
       <path
         d="M.05 15.23L.02 35.87a6 6 0 009.33 5l20.6-13.72 20.54 13.8a6 6 0 009.34-4.97l.04-20A11.81 11.81 0 0044.75 4.62l-.87.25a50.87 50.87 0 01-29.36-.27A11.15 11.15 0 00.05 15.23z"
-        fill="url(#paint0_linear_logo)"
+        fill="url(#paint_linear_logo)"
       />
       <path
         d="M30.16 27.16l-6.03-4.3a.5.5 0 00-.78.5l1.3 7.3 5.51-3.5z"
@@ -135,7 +140,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       <defs>
         <lineargradient
           gradientUnits="userSpaceOnUse"
-          id="paint0_linear_logo"
+          id="paint_linear_logo"
           x1="29.16"
           x2="30.15"
           y1="-7.4"
@@ -166,17 +171,12 @@ exports[`<Footer /> should render 4 column topics 1`] = `
         class="c4 c5"
         color="black"
       >
-        Contact
+        Contact Us
       </h2>
       <a
         href="mailto:sac@wongames.com"
       >
         sac@wongames.com
-      </a>
-      <a
-        href="+5599998888"
-      >
-        +55 9999-8888
       </a>
     </div>
     <div
@@ -277,4 +277,4 @@ exports[`<Footer /> should render 4 column topics 1`] = `
     Won Games 2020 © All rights reserved.
   </div>
 </footer>
-`;
+`

@@ -6,7 +6,6 @@ import { gamesMapper, highlightMapper } from 'utils/mappers'
 import Cart, { CartProps } from 'templates/Cart'
 
 import itemsMock from 'components/CartList/mock'
-
 import cardsMock from 'components/PaymentOptions/mock'
 
 export default function CartPage(props: CartProps) {

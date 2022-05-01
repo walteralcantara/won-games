@@ -34,6 +34,7 @@ export const MenuGroup = styled.div`
     flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
+
     > div {
       margin-left: ${theme.spacings.xsmall};
     }
@@ -43,8 +44,8 @@ export const MenuGroup = styled.div`
 export const MenuNav = styled.div`
   ${({ theme }) => css`
     ${media.greaterThan('medium')`
-      margin-left: ${theme.spacings.small};
-    `}
+			margin-left: ${theme.spacings.small};
+		`}
   `}
 `
 
@@ -56,6 +57,7 @@ export const MenuLink = styled.a`
     margin: 0.3rem ${theme.spacings.small} 0;
     text-decoration: none;
     text-align: center;
+
     &:hover {
       &::after {
         content: '';
@@ -65,6 +67,7 @@ export const MenuLink = styled.a`
         background-color: ${theme.colors.primary};
         animation: hoverAnimation 0.2s forwards;
       }
+
       @keyframes hoverAnimation {
         from {
           width: 0;
@@ -124,13 +127,13 @@ export const MenuFull = styled.nav<MenuFullProps>`
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.xlarge};
       margin-bottom: ${theme.spacings.small};
-      transition: transform 0.3s ease-in-out;
       transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
+      transition: transform 0.3s ease-in-out;
     }
 
     ${RegisterBox} {
-      transition: transform 0.3s ease-in-out;
       transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
+      transition: transform 0.3s ease-in-out;
     }
   `}
 `
@@ -141,6 +144,7 @@ export const RegisterBox = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0 ${theme.spacings.xlarge} ${theme.spacings.xlarge};
+
     > span {
       display: block;
       margin: ${theme.spacings.xxsmall} 0;

@@ -6,7 +6,7 @@ import {
 
 export const bannerMapper = (banners: QueryHome_banners[]) => {
   return banners.map((banner) => ({
-    img: `http://localhost:8085${banner.image?.url}`,
+    img: `${banner.image?.url}`,
     title: banner.title,
     subtitle: banner.subtitle,
     buttonLabel: banner.button?.label,
@@ -26,7 +26,7 @@ export const gamesMapper = (games: QueryGames_games[] | null | undefined) => {
       title: game.name,
       slug: game.slug,
       developer: game.developers[0].name,
-      img: `http://localhost:8085${game.cover?.url}`,
+      img: `${game.cover?.url}`,
       price: game.price
     }))
   )
@@ -39,8 +39,8 @@ export const highlightMapper = (
     highlight && {
       title: highlight.title,
       subtitle: highlight.subtitle,
-      backgroundImage: `http://localhost:8085${highlight.background?.url}`,
-      floatImage: `http://localhost:8085${highlight.floatImage?.url}`,
+      backgroundImage: `${highlight.background?.url}`,
+      floatImage: `${highlight.floatImage?.url}`,
       buttonLabel: highlight.buttonLabel,
       buttonLink: highlight.buttonLink,
       alignment: highlight.alignment
